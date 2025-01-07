@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghanaian Recipes - Taste of Ghana</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Taste of Ghana</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Recipe Search Section -->
+    <section class="recipe-search">
+        <div class="search-container">
+            <h2>Find Your Favorite Ghanaian Dish</h2>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search recipes...">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="main">Main Dishes</button>
+                <button class="filter-btn" data-filter="soups">Soups & Stews</button>
+                <button class="filter-btn" data-filter="sides">Side Dishes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- After search section -->
+    <div class="section-divider"></div>
+
+    <!-- Recipe Grid -->
+    <section class="recipes-section">
+        <div class="recipe-grid">
+            <!-- Main Dishes -->
+            <div class="recipe-card" data-category="main">
+                <img src="https://i.pinimg.com/564x/8b/ba/5c/8bba5c5793f8e9bad5e8f7e6266d9ce3.jpg" alt="Jollof Rice">
+                <div class="recipe-content">
+                    <h3>Jollof Rice</h3>
+                    <p>Classic Ghanaian party rice dish</p>
+                    <span class="cooking-time">🕒 45 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="main">
+                <img src="https://i.pinimg.com/564x/2b/19/73/2b1973e3147a9416c13a82e5e30115d6.jpg" alt="Waakye">
+                <div class="recipe-content">
+                    <h3>Waakye</h3>
+                    <p>Rice and beans with waakye leaves</p>
+                    <span class="cooking-time">🕒 60 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="main">
+                <img src="https://i.pinimg.com/564x/95/b7/87/95b787893ed5a55886f496b0c1c21f36.jpg" alt="Banku">
+                <div class="recipe-content">
+                    <h3>Banku & Okro Soup</h3>
+                    <p>Fermented corn and cassava dough</p>
+                    <span class="cooking-time">🕒 60 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="main">
+                <img src="https://i.pinimg.com/564x/d9/d6/b7/d9d6b7e9b53f59db4ada3d836a35e458.jpg" alt="Fufu">
+                <div class="recipe-content">
+                    <h3>Fufu & Light Soup</h3>
+                    <p>Pounded cassava and plantain</p>
+                    <span class="cooking-time">🕒 45 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="main">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2022/01/tuo-zaafi-recipe.jpg" alt="Tuo Zaafi">
+                <div class="recipe-content">
+                    <h3>Tuo Zaafi</h3>
+                    <p>Northern Ghana's corn flour dish</p>
+                    <span class="cooking-time">🕒 70 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <!-- Soups & Stews -->
+            <div class="recipe-card" data-category="soups">
+                <img src="https://i.pinimg.com/564x/f0/92/a4/f092a4c6c87e13f099b42fdb2b2337f4.jpg" alt="Groundnut Soup">
+                <div class="recipe-content">
+                    <h3>Groundnut Soup</h3>
+                    <p>Rich peanut-based soup</p>
+                    <span class="cooking-time">🕒 90 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="soups">
+                <img src="https://i.pinimg.com/564x/7c/03/c2/7c03c2a09d4db8c8c3956c7d2b908662.jpg" alt="Light Soup">
+                <div class="recipe-content">
+                    <h3>Light Soup</h3>
+                    <p>Traditional spicy soup</p>
+                    <span class="cooking-time">🕒 75 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="soups">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2016/09/palm-nut-soup-recipe.jpg" alt="Palm Nut Soup">
+                <div class="recipe-content">
+                    <h3>Palm Nut Soup (Abenkwan)</h3>
+                    <p>Rich palm fruit soup</p>
+                    <span class="cooking-time">🕒 120 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="soups">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2017/03/kontomire-stew-recipe.jpg" alt="Kontomire Stew">
+                <div class="recipe-content">
+                    <h3>Kontomire Stew</h3>
+                    <p>Cocoyam leaves stew</p>
+                    <span class="cooking-time">🕒 60 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <!-- Side Dishes -->
+            <div class="recipe-card" data-category="sides">
+                <img src="https://i.pinimg.com/564x/b8/66/c2/b866c2297cb57f84ec8785a21b9661e7.jpg" alt="Kelewele">
+                <div class="recipe-content">
+                    <h3>Kelewele</h3>
+                    <p>Spiced fried plantains</p>
+                    <span class="cooking-time">🕒 30 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="sides">
+                <img src="https://i.pinimg.com/564x/1c/87/99/1c8799a425f88e58a078940a5c5f515c.jpg" alt="Gari Foto">
+                <div class="recipe-content">
+                    <h3>Gari Foto</h3>
+                    <p>Cassava granules with eggs</p>
+                    <span class="cooking-time">🕒 25 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="sides">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2021/05/kenkey-recipe.jpg" alt="Kenkey">
+                <div class="recipe-content">
+                    <h3>Kenkey</h3>
+                    <p>Fermented corn dough</p>
+                    <span class="cooking-time">🕒 180 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="sides">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2018/09/red-red-recipe.jpg" alt="Red Red">
+                <div class="recipe-content">
+                    <h3>Red Red</h3>
+                    <p>Bean stew with fried plantains</p>
+                    <span class="cooking-time">🕒 45 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="sides">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2021/03/tatale-recipe-my-active-kitchen-3-scaled.jpg" alt="Tatale">
+                <div class="recipe-content">
+                    <h3>Tatale</h3>
+                    <p>Spiced plantain pancakes</p>
+                    <span class="cooking-time">🕒 30 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="sides">
+                <img src="https://www.myactivekitchen.com/wp-content/uploads/2015/12/yam-balls-recipe.jpg" alt="Yam Balls">
+                <div class="recipe-content">
+                    <h3>Yam Balls</h3>
+                    <p>Deep-fried seasoned yam</p>
+                    <span class="cooking-time">🕒 40 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <!-- Additional Dishes -->
+            <div class="recipe-card" data-category="main">
+                <img src="https://i.pinimg.com/564x/4d/63/42/4d6342623541c8081f279365f0c23bef.jpg" alt="Yam and Kontomire Stew">
+                <div class="recipe-content">
+                    <h3>Yam and Kontomire Stew</h3>
+                    <p>Boiled yam with cocoyam leaves stew</p>
+                    <span class="cooking-time">🕒 50 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="sides">
+                <img src="https://i.pinimg.com/564x/e9/8e/ab/e98eab56c285680c01db73b0d4ca6f1a.jpg" alt="Tatale">
+                <div class="recipe-content">
+                    <h3>Tatale</h3>
+                    <p>Ripe plantain pancakes</p>
+                    <span class="cooking-time">🕒 30 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+
+            <div class="recipe-card" data-category="main">
+                <img src="https://i.pinimg.com/564x/d2/7c/1d/d27c1d89082989856ef2e4197c3b0ffe.jpg" alt="Kenkey">
+                <div class="recipe-content">
+                    <h3>Kenkey & Fish</h3>
+                    <p>Fermented corn dough with grilled fish</p>
+                    <span class="cooking-time">🕒 180 mins</span>
+                    <button class="view-recipe">View Recipe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

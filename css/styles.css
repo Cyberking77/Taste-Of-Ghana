@@ -1,0 +1,696 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e67e22' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    padding-top: 70px;
+    background-image: url('https://i.pinimg.com/564x/8f/5d/cb/8f5dcb6f2c27ee06a5f3155b5f0812f4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 245, 230, 0.6);
+    z-index: -1;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: linear-gradient(rgba(232, 190, 172, 0.85), rgba(232, 190, 172, 0.85)),
+                url('https://i.pinimg.com/564x/77/3e/77/773e77507b92c4120da83ef5cd2aa88c.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px; /* Fixed height for navbar */
+}
+
+.logo h1 {
+    color: #5D2E0E; /* Darker brown for better contrast */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #4A2410; /* Darker color for better contrast */
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.2); /* Slight white background for better readability */
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #8B4513;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                      url('https://i.pinimg.com/564x/8b/ba/5c/8bba5c5793f8e9bad5e8f7e6266d9ce3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+    color: white;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.recipe-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.15);
+    background: var(--hover-color);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #f5f5f5; /* Fallback color if image fails to load */
+} 
+
+/* About Page Styles */
+.about-section {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600') center/cover no-repeat fixed;
+    padding: 4rem 5%;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    color: #e67e22;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Contact Page Styles */
+.contact-section {
+    padding: 4rem 5%;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    padding: 1rem;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
+
+/* Recipe Card Enhancements */
+.recipe-content {
+    padding: 1.2rem;
+}
+
+.cooking-time {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+} 
+
+/* Recipe Search Styles */
+.recipe-search {
+    background-color: #ffecd9;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.search-container h2 {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #fff;
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #e67e22;
+    color: white;
+}
+
+/* Recipe Card Enhancements */
+.view-recipe {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-recipe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
+
+.recipes-section {
+    padding: 2rem 5%;
+} 
+
+/* Contact Page Enhanced Styles */
+.contact-hero {
+    background: linear-gradient(135deg, #ffecd9 0%, #ffdfb0 100%);
+    text-align: center;
+    padding: 4rem 5%;
+    margin-bottom: 2rem;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info-section {
+    padding: 2rem 5%;
+    margin-bottom: 3rem;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    background: var(--hover-color);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.15);
+}
+
+.contact-info-card i {
+    font-size: 2rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+.contact-info-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #666;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e67e22;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.faq-section {
+    background: linear-gradient(135deg, #ffecd9 0%, #ffdfb0 100%);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background: var(--hover-color);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.15);
+}
+
+.faq-item h3 {
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* Add these decorative elements */
+.section-divider {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #e67e22, transparent);
+    margin: 2rem 0;
+    opacity: 0.3;
+}
+
+/* Dark Mode Styles */
+:root {
+    --bg-color: #fff5e6;
+    --text-color: #333;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --border-color: #ddd;
+    --hover-color: rgba(255, 255, 255, 1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #fff;
+    --card-bg: rgba(40, 40, 40, 0.95);
+    --header-bg: rgba(30, 30, 30, 0.95);
+    --border-color: #444;
+    --hover-color: rgba(50, 50, 50, 1);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    margin-left: 2rem;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] #darkModeToggle {
+    color: #fff;
+}
+
+#darkModeToggle .fa-sun {
+    display: none;
+}
+
+[data-theme="dark"] #darkModeToggle .fa-moon {
+    display: none;
+}
+
+[data-theme="dark"] #darkModeToggle .fa-sun {
+    display: inline;
+}
+
+/* Update existing styles with CSS variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--header-bg);
+}
+
+.nav-links a {
+    color: var(--text-color);
+}
+
+.recipe-card {
+    background: var(--card-bg);
+}
+
+.recipe-card:hover {
+    background: var(--hover-color);
+}
+
+.recipe-content h3 {
+    color: var(--text-color);
+}
+
+.recipe-content p {
+    color: var(--text-color);
+}
+
+.contact-info-card {
+    background: var(--card-bg);
+}
+
+.contact-info-card:hover {
+    background: var(--hover-color);
+}
+
+.contact-container {
+    background: var(--card-bg);
+}
+
+.form-group input,
+.form-group textarea,
+.contact-form select {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.faq-item {
+    background: var(--card-bg);
+}
+
+.faq-item:hover {
+    background: var(--hover-color);
+}
+
+[data-theme="dark"] .recipe-search {
+    background-color: #2a2a2a;
+}
+
+[data-theme="dark"] .contact-hero,
+[data-theme="dark"] .faq-section {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+[data-theme="dark"] .about-section {
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
+                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600') center/cover no-repeat fixed;
+}
+
+/* Update Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: linear-gradient(rgba(232, 190, 172, 0.85), rgba(232, 190, 172, 0.85)),
+                url('https://i.pinimg.com/564x/77/3e/77/773e77507b92c4120da83ef5cd2aa88c.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px; /* Fixed height for navbar */
+}
+
+.logo h1 {
+    color: #5D2E0E; /* Darker brown for better contrast */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.nav-links a {
+    color: #4A2410; /* Darker color for better contrast */
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.2); /* Slight white background for better readability */
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #8B4513;
+    transform: translateY(-2px);
+}
+
+/* Add this to create space below fixed navbar */
+body {
+    padding-top: 70px;
+    background-image: url('https://i.pinimg.com/564x/8f/5d/cb/8f5dcb6f2c27ee06a5f3155b5f0812f4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+/* Add overlay to body */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 245, 230, 0.6);
+    z-index: -1;
+}
+
+/* Update active link style */
+.nav-links a.active {
+    background: rgba(139, 69, 19, 0.1);
+    color: #8B4513;
+}
+
+/* Add hover effect for nav links */
+.nav-links a:hover {
+    transform: translateY(-2px);
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+}
